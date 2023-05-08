@@ -57,6 +57,11 @@ public class EditProfilAdmin extends Form{
         btnValider.addActionListener((e) -> {
             User user = new User(SessionManager.getId(),tfFullName.getText().toString(), tfEmail.getText().toString(),
                     tfNumTell.getText().toString(),tfFullAddress.getText().toString());
+            
+                SessionManager.setUserName(tfFullName.getText().toString());
+                SessionManager.setEmail( tfEmail.getText().toString());
+                SessionManager.setFullAddress(tfFullAddress.getText().toString());
+                SessionManager.setNumTel(tfNumTell.getText().toString());
             ServiceUser.getInstance().ModifierProfilAdmin(user);
            
         });

@@ -307,7 +307,7 @@ public class ServiceUser {
             @Override
             public void actionPerformed(NetworkEvent evt) {
                 
-                    Dialog.show("Success","Client supprimer avec succes!","OK",null);
+                     Dialog.show("Success","Client supprimer avec succes!","OK",null);
                     new Home().show();
                     req.removeResponseListener(this);
             }

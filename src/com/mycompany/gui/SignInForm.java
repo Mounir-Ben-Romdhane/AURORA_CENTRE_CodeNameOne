@@ -15,6 +15,7 @@ import com.codename1.ui.Form;
 import com.codename1.ui.Image;
 import com.codename1.ui.Label;
 import com.codename1.ui.TextField;
+import com.codename1.ui.Toolbar;
 import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.layouts.FlowLayout;
@@ -22,6 +23,10 @@ import com.codename1.ui.plaf.Style;
 import com.codename1.ui.util.Resources;
 import com.codename1.ui.util.UIBuilder;
 import com.mycompany.services.ServiceUser;
+import com.codename1.ui.*;
+import com.codename1.ui.layouts.*;
+import com.codename1.ui.plaf.UIManager;
+
 
 /**
  *
@@ -41,6 +46,7 @@ public class SignInForm extends Form{
 
     
     public SignInForm(Resources res) {
+        
     
     current=this;
         setTitle("Connexion");
@@ -57,7 +63,7 @@ public class SignInForm extends Form{
          signUp = new Button("Register");
         
        
-        
+        //add(BorderLayout.NORTH, new Label(res.getImage("bg.png"), "LogoLabel"));
         
         //mp oublié
          mp = new Button("oublier mot de passe?","CenterLabel");
@@ -67,15 +73,12 @@ public class SignInForm extends Form{
         
         
         signUp.addActionListener(e -> new SignUpForm(res,current));
-        signUp.setUIID("Link");
+        
         Label doneHaveAnAccount = new Label("Vous n'avez aucune compte?","CenterLabel");
         
         cnt1 = new Container(BoxLayout.x());
         cnt1.addAll(doneHaveAnAccount,signUp);
-        
-        
-        
-        
+       
         
        
         add(tfEmail);

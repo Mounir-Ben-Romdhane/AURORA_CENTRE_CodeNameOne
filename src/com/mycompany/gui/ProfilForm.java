@@ -56,7 +56,7 @@ public class ProfilForm extends Form{
         
         
          modifProfil.addActionListener(e -> new ModifierProfil(current));
-        modifProfil.setUIID("Link");
+        
         addAll(tfFullName,tfEmail,tfFullAddress,tfNumTell,tfRole,modifProfil);
         
         show();

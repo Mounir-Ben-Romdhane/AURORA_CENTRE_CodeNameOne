@@ -12,6 +12,8 @@ import com.codename1.ui.FontImage;
 import com.codename1.ui.Form;
 import com.codename1.ui.Label;
 import com.codename1.ui.TextField;
+import com.codename1.ui.events.ActionEvent;
+import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.util.Resources;
 import com.mycompany.services.ServiceUser;
@@ -41,6 +43,27 @@ public class Home extends Form{
         getToolbar().addCommandToSideMenu("List Clients", null, ev -> {
                     new ListClients(current);
                 });
+        getToolbar().addCommandToSideMenu("List Produit", null, ev -> {
+                    new ListProduit(current).show();
+                });
+        getToolbar().addCommandToSideMenu("Ajout Service", null, ev -> {
+                    new AddServiceForm(current);
+                });
+        getToolbar().addCommandToSideMenu("List service", null, ev -> {
+                    new ListServiceForm(current).show();
+                });
+        getToolbar().addCommandToSideMenu("Ajout Evenement", null, ev -> {
+                    new AddEvenementForm(current).show();
+                });
+        getToolbar().addCommandToSideMenu("List Evenements", null, ev -> {
+                    new ListEvenements(current).show();
+                });
+        getToolbar().addCommandToSideMenu("List Reclamation", null, ev -> {
+                    new ListReclamationBack(current).show();
+                });
+        getToolbar().addCommandToSideMenu("List Commandes", null, ev -> {
+                 new ListCommandeForm(current).show();
+            });
         getToolbar().addCommandToSideMenu("Profile", null, ev -> {
                     new ProfilAdmin(current);
                 });
@@ -48,6 +71,7 @@ public class Home extends Form{
                     new SignInForm(theme);
                     Dialog.show("Success","Log out succesfully!","OK",null);
                 });
+          
         show();
         
       

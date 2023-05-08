@@ -74,14 +74,13 @@ public class ListClients extends Form{
              
              cnt.add(modifProfil);
              cnt.add(suppProfil);
-             
             // tfFullName = new Label(fullName+tfEmail+tfFullAddress+tfNumTell+pass+"**********\n");
              //tfEmail = new Label(email);
              //tfFullAddress = new Label(fullAddress);
              //tfNumTell = new Label(numTell);
              //tfId = new Label(""+Id);
              //addAll(tfId,tfFullName,tfEmail,tfFullAddress,tfNumTell,new Label("****************"));
-             add("Id : "+(int)id);
+             //add("Id : "+(int)id);
              add("UserName : "+fullName);
              add("EMail : "+email);
              add("FullAddress : "+fullAddress);
@@ -91,7 +90,7 @@ public class ListClients extends Form{
              setScrollable(true);
              
             modifProfil.addActionListener(e -> new ModifClientFromAdmin(current,user));
-            modifProfil.setUIID("Link");
+            
             
             suppProfil.addActionListener(new ActionListener() {
                 @Override
@@ -99,7 +98,6 @@ public class ListClients extends Form{
                     ServiceUser.getInstance().deleteClient((int) user.getId());
                 }
             });
-            suppProfil.setUIID("Link");
              
              show();
         }

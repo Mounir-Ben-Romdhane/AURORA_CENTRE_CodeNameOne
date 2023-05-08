@@ -28,8 +28,29 @@ public class HomeClient extends Form{
         setTitle("Welcome Client");
         setLayout(BoxLayout.y());
         
+        getToolbar().addCommandToSideMenu("List Services", null, ev -> {
+                    new ListServiceFront(current).show();
+                });
+        getToolbar().addCommandToSideMenu("List Produit", null, ev -> {
+                    new ListProduitFront(current).show();
+                });
+        getToolbar().addCommandToSideMenu("List Evenements", null, ev -> {
+                    new ListEvenementsFront(current).show();
+                });
+        getToolbar().addCommandToSideMenu("List Commandes", null, ev -> {
+            new ListCommandeForm(current).show();
+        });
+         getToolbar().addCommandToSideMenu("Ajout Reclamation", null, ev -> {
+            new AddReclamationForm(current).show();
+        });
+        getToolbar().addCommandToSideMenu("List Reclamation", null, ev -> {
+                    new ListReclamationForm(current).show();
+                });
         getToolbar().addCommandToSideMenu("Profile", null, ev -> {
                     new ProfilForm(current);
+                });
+        getToolbar().addCommandToSideMenu("Localisation de centre", null, ev -> {
+                    new MapForm();
                 });
          getToolbar().addCommandToSideMenu("LogOut", null, ev -> {
                     new SignInForm(theme);

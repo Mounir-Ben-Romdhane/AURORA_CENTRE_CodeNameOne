@@ -56,7 +56,6 @@ public class ProfilAdmin extends Form{
         
         
          modifProfil.addActionListener(e -> new EditProfilAdmin(current));
-        modifProfil.setUIID("Link");
         addAll(tfFullName,tfEmail,tfFullAddress,tfNumTell,tfRole,modifProfil);
         
         show();
