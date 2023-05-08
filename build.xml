@@ -5,8 +5,8 @@
     To learn more about Codename One go to https://www.codenameone.com/
     -->
         
-    <project name="PidevMobile" default="default" basedir=".">
-    <description>Builds, tests, and runs the project PidevMobile.</description>
+    <project name="PIDEV_MOBILE_INTEGRATION" default="default" basedir=".">
+    <description>Builds, tests, and runs the project PIDEV_MOBILE_INTEGRATION.</description>
     <import file="nbproject/build-impl.xml"/>
     <property file="codenameone_settings.properties"/>
     <property name="automated" value="false" />
